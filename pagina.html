@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landingpage</title>
+    <link href="=https://fonts.googleapis.com/css2?family=Noto+Sand&display" rel="stylesheet" > 
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+</head>
+<link rel="stylesheet" href="pagina.css">
+<body>
+
+
+    <div style="position: relative; width: 100%; height: 0%; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAGvNbWgrNU/2YSpn2ZQ2G4aN5JM8O6A7g/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+  
+</div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGvNbWgrNU&#x2F;2YSpn2ZQ2G4aN5JM8O6A7g&#x2F;view?utm_content=DAGvNbWgrNU&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a>
+   
+    <div class="barra">
+    <h2>COMPRA TU CASACA DEL MARRON </h2>
+    </div>
+
+     <div class="barra2">
+
+  <div class="barra-promo">
+    <img src="Inicio - PlatenseMania_files/identidad.webp" alt="">
+    <h5>PRECIO EXCLUSIVO SOCIOS<br>Suscribite y disfrutá de un 20% OFF</h5>
+  </div>
+
+  <div class="barra-camiseta">
+    <img src="Inicio - PlatenseMania_files/camiseta-de-futbol.webp" alt="">
+    <h5>PERSONALIZÁ TU CAMISETA<br>Con N° y Parche LPF</h5>
+  </div>
+
+  <div class="barra-puntos">
+    <img src="Inicio - PlatenseMania_files/beneficio-e1748550340142.webp" alt="">
+    <h5>AHORA TUS COMPRAS TIENEN RECOMPENSA<br>Sumá puntos y canjealos por beneficios</h5>
+  </div>
+
+</div>
+
+    
+ 
+<div class="suscripcion"> 
+    <input type="email" id="email" placeholder="Ingresa tu gmail" required> 
+    <button id="btn-suscribir" class="boton-suscribir">SUSCRIBIRSE</button>
+</div>
+
+     <script>
+document.getElementById('btn-suscribir').addEventListener('click', function() {
+    const email = document.getElementById('email').value;
+    if(email && email.includes('@')) {
+        alert('¡Gracias por suscribirte, ' + email + '!');
+        document.getElementById('email').value = '';
+    } else {
+        alert('Por favor, ingresa un correo valido.');
+    }
+});
+</script>
+
+
+   <section class="preguntas">
+    <details>
+        <summary>¿Cuánto tarda el envío?</summary>
+        <p>El envío puede demorar entre 3 y 5 días hábiles dependiendo de tu ubicación.</p>
+    </details>
+
+    <details>
+        <summary>¿Qué métodos de pago aceptan?</summary>
+        <p>Aceptamos tarjetas de crédito, débito, transferencias bancarias y pagos digitales como MercadoPago.</p>
+    </details>
+
+    <details>
+        <summary>¿Ofrecen mas indumentaria?</summary>
+        <p>Sí, ademas de camisetas tenemos pantalones, buzos , gorros y mas!!!.</p>
+    </details>
+
+    <details>
+        <summary>¿Puedo devolver o cambiar el producto?</summary>
+        <p>Claro, si lo queres devolver tenes que comunicarte con nosotros y lo podes cambiar por otra camiseta o productos que equivalgan al mismo precio.</p>
+    </details>
+</section>
+
+<body>
+
+    
+<div id="timer" class="timer"></div>
+<script>
+  const temporizador = new Date("2025-10-10T00:00:00").getTime();
+  const timerElement = document.getElementById("timer");
+
+  const tempnuevo = () => {
+    const now = new Date().getTime();
+    const distance = temporizador - now;
+
+    if (distance < 0) {
+      timerElement.innerHTML = "<strong>¡La oferta ha terminado!</strong>";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    timerElement.innerHTML = `
+      <div>
+        <div style="font-size:1.1em; margin-bottom:8px;">
+          ¡Aprovechá la oferta exclusiva de un 65%!!! Tiempo restante:
+        </div>
+        <span style="font-size:1.3em;">
+          ${days}d : ${hours.toString().padStart(2, '0')}h : ${minutes.toString().padStart(2, '0')}m : ${seconds.toString().padStart(2, '0')}s
+        </span>
+      </div>
+    `;
+  };
+
+  tempnuevo();
+  setInterval(tempnuevo, 1000);
+</script>
+</body>
+

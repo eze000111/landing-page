@@ -1,0 +1,189 @@
+body {
+  background-color: #412b23;
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+.barra { 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #412b23;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 5vw;
+  font-weight: bold;
+  justify-content: center;
+  font-family: 'Noto Sans', sans-serif;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000; 
+}
+
+h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.5em, 2.2vw, 2.2em);
+  color: #f5f5f5;
+  text-align: center;
+}
+
+.logo-text {
+  font-weight: 800; 
+  font-size: clamp(18px, 2vw, 24px);
+  color: white;
+}
+
+
+input {
+  
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  font-size: clamp(1em, 2vw, 1.5em);
+  margin: 20px auto;
+  padding: 15px;
+
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+.barra2 {
+  display: flex; 
+  font-size: 1,2em;
+  flex-wrap: wrap;
+  justify-content: space-around; 
+  align-items: center; 
+  background-color: #c1a27a; 
+  padding: 10px;
+  width: 100%;
+}
+
+.barra2 div {
+  display: flex; 
+  align-items: center;
+  gap: 10px; 
+  font-size: clamp(0.9em, 1.2vw, 1.2em);
+  color: #2e2e2e;
+}
+
+.barra2 img {
+  width: clamp(40px, 5vw, 60px);
+  height: auto;
+}
+
+
+.suscripcion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  color: #c1a27a;
+  width: 100%;
+  min-height: 150px;
+}
+
+.boton-suscribir {  
+  width: clamp(140px, 20vw, 190px);
+  height: clamp(45px, 8vh, 60px);
+  font-size: clamp(1.2em, 2vw, 1.9em);
+  padding: 10px;
+  background-color: #c1a27a; 
+  border: none; 
+  border-radius: 10px; 
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: bold;
+  cursor: pointer; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  color: #000;
+}
+
+.boton-suscribir:hover {
+  background: linear-gradient(90deg, #412b23 0%, #c9a96a 100%);
+  transform: scale(1.07);
+  box-shadow: 0 8px 24px rgba(65,43,35,0.3);
+}
+
+
+.preguntas {
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 10px; 
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.2em, 2vw, 1.8em);
+  padding: 20px;
+}
+
+.preguntas details {
+  width: 90%; 
+  max-width: 600px;
+  background: #f5f5f5; 
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.timer {
+  background-color: #c9a96a;
+  color: #fff;
+  padding: 15px 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.2em, 2.2vw, 2em);
+  box-shadow: 0 8px 24px rgba(65,43,35,0.18);
+  text-align: center;
+  min-width: 200px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 2px;
+  margin: 20px auto;
+}
+
+
+@media (max-width: 768px) {
+  .barra {
+    height: 45px;
+    padding: 0 3vw;
+  }
+
+  .barra2 {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+  }
+
+  .preguntas details {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  input {
+    width: 90%;
+    font-size: 1em;
+    padding: 12px;
+  }
+
+  .boton-suscribir {
+    font-size: 1.2em;
+    width: 70%;
+    height: 50px;
+  }
+
+  .timer {
+    min-width: auto;
+    padding: 10px;
+    font-size: 1.2em;
+  }
+}
